@@ -19,13 +19,8 @@ def pred(msg):
     print(f"{colorama.Fore.RED}{msg}")
 
 def pdiv():
-    pblu("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
-    "- - - - - - - - -")
-
-def dammit(man):
-    pass
-
-
+    pblu("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+    "- - - - - -")
 
 
 data = pandas.read_csv(datafile)
