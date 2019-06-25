@@ -60,7 +60,10 @@ for index, row in df.iterrows():
         pwhite(row)
         pdiv()
 
-
+phead("- - - - TEXT HISTOGRAM (VALUE COUNT) OF GENRES")
+#pwhite(df.groupby('Genres')***NEED A REFERENCE TO INTERNAL INTEGER INDEX OR SOME UNIQUE ID TO COUNT HERE**.nunique())
+# The Apple data set has a unique id column which we successfully use and refer to by name here.
+# TODO: Now sort by count.
 
 
 ##

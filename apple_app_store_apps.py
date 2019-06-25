@@ -78,7 +78,9 @@ for index, row in df.iterrows():
         pdiv()
 
 
-
+phead("- - - - TEXT HISTOGRAM (VALUE COUNT) OF GENRES")
+pwhite(df.groupby('prime_genre')['id'].nunique())
+# TODO: Now sort by count.
 
 ##
 #

@@ -7,6 +7,9 @@
 
 pandas
 colorama
+# When the following are installed, pandas can make big performance gains:
+numexpr
+bottleneck
 
 
 ##
