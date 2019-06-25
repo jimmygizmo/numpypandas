@@ -1,0 +1,12 @@
+
+###############################################################################
+# Project-specific Python dependencies
+
+# This requirements.txt file should be located in the root directory of this
+# project/repository.
+
+pandas
+
+
+##
+#
