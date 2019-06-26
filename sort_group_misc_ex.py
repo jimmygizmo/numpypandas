@@ -3,7 +3,8 @@
 import pandas as pd
 import happyprint as hp
 
-
+# Trying to figure out how this aggregation works. I think it could be a lot
+# simpler.
 
 df = pd.DataFrame({
     'STNAME':list('abscscbcdbcsscae'),
@@ -42,3 +43,4 @@ hp.pwhite(df)
 # 1      b      3
 # 0      a      2
 # 3      d      1
+
