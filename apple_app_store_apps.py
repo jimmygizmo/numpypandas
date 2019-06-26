@@ -1,48 +1,25 @@
 #! /usr/bin/env python3
         
-import pandas
-import colorama
+import pandas as pd
+import happyprint as hp
 
 csvfile = "data/AppleStore.csv"
 
-
-def pwhite(msg):
-    print(f"{colorama.Fore.WHITE}{msg}")
-
-def pyellow(msg):
-    print(f"{colorama.Fore.YELLOW}{msg}")
-
-def pblue(msg):
-    print(f"{colorama.Fore.CYAN}{msg}")
-
-def pred(msg):
-    print(f"{colorama.Fore.RED}{msg}")
-
-def pdiv():
-    pblue("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
-
-def phead(msg):
-    print()
-    pdiv()
-    pyellow(msg)
-    pdiv()
-
 # Load the csv file into a pandas dataframe
-df = pandas.read_csv(csvfile)
+df = pd.read_csv(csvfile)
 
+hp.phead("- - - - OVERVIEW OF RAW, UNFILTERED DATA")
+hp.pblue("First 10 rows of data:")
+hp.pwhite(df.head(10))
 
-phead("- - - - OVERVIEW OF RAW, UNFILTERED DATA")
-pblue("First 10 rows of data:")
-pwhite(df.head(10))
-
-pblue("Last 10 rows of data:")
-pwhite(df.tail(10))
+hp.pblue("Last 10 rows of data:")
+hp.pwhite(df.tail(10))
 
 
 # phead("DATA CLEANING OF KNOWN BAD RECORDS")
 # df.replace({r"Varies\swith\sdevice": ""}, regex=True, inplace=True)
-# pblue("Replaced all occurances of 'Varies with device' from all rows and all "
-#       "columns. Compare with previous output of last 10 rows.")
+# pblue("Replaced all occurances of 'Varies with device' from all rows and "
+#       "all columns. Compare with previous output of last 10 rows.")
 # pwhite(df.tail(10))
 # phead("DATA CLEANING OF KNOWN BAD RECORDS")
 # CANNOT DO IT THIS WAY: ValueError: The truth value of a Series is ambiguous.
@@ -70,15 +47,15 @@ pwhite(df.tail(10))
 
 
 # Search specific fields and print occurances as entire record.
-phead("- - - - FLAPPY SEARCH. ALL APP TITLES CONTAINING 'lappy'")
+hp.phead("- - - - FLAPPY SEARCH. ALL APP TITLES CONTAINING 'lappy'")
 for index, row in df.iterrows():
     app_title = row["track_name"]
     if "lappy" in app_title:
-        pwhite(row)
-        pdiv()
+        hp.pwhite(row)
+        hp.pdiv()
 
 
-phead("- - - - TEXT HISTOGRAM (VALUE COUNT) OF GENRES")
-pwhite(df.groupby('prime_genre')['id'].nunique())
+hp.phead("- - - - TEXT HISTOGRAM (VALUE COUNT) OF GENRES")
+hp.pwhite(df.groupby('prime_genre')['id'].nunique())
 # TODO: Now sort by count.
 
