@@ -29,6 +29,3 @@ https://www.numpy.org/
 Colorama:
 https://pypi.org/project/colorama/
 
-
-##
-#

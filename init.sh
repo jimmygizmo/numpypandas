@@ -2,7 +2,7 @@
 ###############################################################################
 # This script will create your Python virtual environment in a best-practice
 # configuration which also maximises compatibility with the VSCode IDE. VSCode
-# is currently the IDE preferred by most Python developers. VSCode will
+# is currently the IDE preferred by many Python developers. VSCode will
 # automatically detect and activate a virtual environment named .venv and will
 # look for some modules which we will install from this init script in order to
 # provide you with important functionality such as static code analysis.
@@ -37,11 +37,18 @@ python3 -m pip install autopep8
 # Install project-specific python depdendencies
 python3 -m pip install -r requirements.txt
 
-# Install this project's package
+# Install this project's package, if it has one.
 # For development, we will install this project's package using the -e option
 # so that pip will install it into the venv using symlinks. In this way we can
 # make changes to the module which will be picked up upon each new execution
 # using the module.
+# IMPORTANT: You still might need to occasionally wipe out your .venv and
+# run this init script again so that your projects module is re-installed.
+# This is because if you create new directories in your module package
+# structure, those may not be covered by the symlinks from the -e option.
+# If you get import errors when working on the python package or modules of
+# this project, you likely just need to wipe out and recreate the .venv,
+# which is best done by re-running this init script after a 'rm -rf .venv'.
 # DISABLED: This project does not currently have its own package.
 #python3 -m pip install -e .
 
@@ -76,6 +83,3 @@ python3 -m pip install -r requirements.txt
 # autopep8==1.4.4
 # pycodestyle==2.5.0
 
-
-##
-#
