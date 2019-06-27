@@ -1,0 +1,54 @@
+Pandas package built-in basic statistics.
+Links to some mathematical definitions from various sources.
+
+-------------------------------------------------------------------------------
+
+Function    Description
+count       Number of non-null observations
+sum         Sum of values
+mean        Mean of values
+mad         Mean absolute deviation
+median      Arithmetic median of values
+min         Minimum
+max         Maximum
+mode        Mode
+abs         Absolute Value
+prod	    Product of values
+std         Unbiased standard deviation
+var         Unbiased variance
+sem         Unbiased standard error of the mean
+skew        Unbiased skewness (3rd moment)
+kurt        Unbiased kurtosis (4th moment)
+quantile    Sample quantile (value at %)
+cumsum      Cumulative sum
+cumprod     Cumulative product
+cummax      Cumulative maximum
+cummin      Cumulative minimum
+
+-------------------------------------------------------------------------------
+
+Mean (Arithmetic Mean) = Average
+https://www.mathsisfun.com/definitions/mean.html
+
+
+Mean Absolute Deviation
+https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/mean-absolute-deviation-mad-review
+https://www.geogebra.org/m/UaMEvgyH
+
+
+Median = Middle Value
+https://www.mathsisfun.com/median.html
+https://www.mathgoodies.com/lessons/vol8/median
+https://en.wikipedia.org/wiki/Median
+
+
+Mode = Most common value in a set
+https://www.mathsisfun.com/mode.html
+https://en.wikipedia.org/wiki/Mode_(statistics)
+
+
+Product
+https://www.wolframalpha.com/examples/mathematics/calculus-and-analysis/products/
+https://www.geeksforgeeks.org/python-pandas-dataframe-product/
+
+

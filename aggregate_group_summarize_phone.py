@@ -59,9 +59,32 @@ hp.pwhite(df.tail(10))
 
 hp.phead("- - - - VARIOUS SUMMARIES")
 
-hp.pblue("Count of 'item' column, hence total number of rows:")
+hp.pblue("Count of 'item' column, hence total number of rows")
 hp.pwhite(df['item'].count())
 
+hp.pblue("Longest phone call - maximum 'duration' amongst all 'call' items")
+# duration = seconds duration for item = 'call'
+hp.pwhite(df['duration'][df['item'] == 'call'].max())
+
+hp.pblue("Largest data transfer - maximum 'duration' amongst all 'data' items")
+# duration = data transferred in MB for item = 'data'
+hp.pwhite(df['duration'][df['item'] == 'data'].max())
+
+hp.pblue("Total seconds of phone calls")
+# duration = seconds duration for item = 'call'
+hp.pwhite(df['duration'][df['item'] == 'call'].sum())
+
+hp.pblue("Count of rows for each month")
+# duration = seconds duration for item = 'call'
+hp.pwhite(df['month'].value_counts())
+
+hp.pblue("Count of non-nul unique network entries")
+# duration = seconds duration for item = 'call'
+hp.pwhite(df['network'].nunique())
+
+hp.pblue("Compare above with value count of network. Total categories match?")
+# duration = seconds duration for item = 'call'
+hp.pwhite(df['network'].value_counts())
 
 
 hp.pdiv()

@@ -8,7 +8,8 @@
     //"python.envFile": "${workspaceFolder}/.env",
     "files.exclude": {
         "**/LICENSE": true,
-        "**/LICENSE.txt": true
+        "**/LICENSE.txt": true,
+        "**/.gitattributes": true
       }
 }
 
